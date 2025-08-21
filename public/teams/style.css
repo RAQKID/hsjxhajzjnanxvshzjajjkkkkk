@@ -1,0 +1,124 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0a0f1a 0%, #101820 50%, #0a0f1a 100%);
+  color: #eaf2ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Logo with blue glowing animation */
+img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(0,140,255,0.7);
+  box-shadow: 0 0 25px rgba(0,140,255,0.8);
+  animation: blueGlow 3s ease-in-out infinite alternate;
+}
+@keyframes blueGlow {
+  from { box-shadow: 0 0 15px rgba(0,140,255,0.5), 0 0 30px rgba(0,140,255,0.3); }
+  to   { box-shadow: 0 0 30px rgba(0,200,255,1), 0 0 60px rgba(0,140,255,0.9); }
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  font-size: 1.2rem;
+  border: 2px solid rgba(0,140,255,0.7);
+}
+
+/* Table headers */
+th {
+  padding: 16px;
+  background: #0056b3; 
+  color: #ffffff;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0,140,255,0.8);
+  border: 1px solid rgba(0,140,255,0.6);
+}
+
+/* Table cells */
+td {
+  padding: 18px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(0,140,255,0.4);
+}
+
+/* Hover effect */
+tr:hover td {
+  background: rgba(0,140,255,0.15);
+  color: #fff;
+  transform: scale(1.01);
+  transition: all 0.25s ease;
+}
+
+/* Footer fixed bottom-right with smooth subtle glow */
+footer {
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-style: italic;
+  white-space: nowrap;
+}
+footer span {
+  font-weight: bold;
+  color: #00bfff;
+  text-shadow: 0 0 6px #00bfff, 0 0 12px rgba(0,191,255,0.6);
+  animation: footerGlow 2.5s ease-in-out infinite alternate;
+}
+
+/* Smooth blue glow animation for footer text only */
+@keyframes footerGlow {
+  0% { text-shadow: 0 0 3px #00bfff, 0 0 8px rgba(0,191,255,0.5); }
+  50% { text-shadow: 0 0 6px #00bfff, 0 0 14px rgba(0,191,255,0.7); }
+  100% { text-shadow: 0 0 3px #00bfff, 0 0 8px rgba(0,191,255,0.5); }
+}
+
+/* Back Button (Top Left, Smaller) */
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  padding: 8px 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 160, 255, 0.7);
+  transition: background 0.3s ease, transform 0.2s ease;
+  animation: rotateArrow 10s linear infinite;
+  z-index: 10000;
+}
+.back-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+  transform: scale(1.1);
+}
+
+/* Rotating animation */
+@keyframes rotateArrow {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

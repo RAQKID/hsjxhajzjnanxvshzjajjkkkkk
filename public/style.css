@@ -1,0 +1,93 @@
+
+/* Reset + base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0f1a 0%, #101820 50%, #0a0f1a 100%);
+  color: #eaf2ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+/* Glowing animated heading */
+h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 8px #508CFF, 0 0 20px #ff4ea0, 0 0 40px rgba(80,140,255,0.6);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 6px #508CFF, 0 0 18px #ff4ea0; }
+  50% { text-shadow: 0 0 12px #ff4ea0, 0 0 26px #508CFF, 0 0 50px rgba(255,80,140,0.7); }
+}
+
+/* Table container */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 700px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* Table rows clickable like buttons */
+table tr {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+table td {
+  padding: 18px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(0,0,0,0.15));
+}
+table tr:hover td {
+  background: linear-gradient(90deg, #ff4ea0 0%, #508CFF 100%);
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(80,140,255,0.4);
+}
+
+/* Button styles */
+button {
+  background: linear-gradient(90deg, #ff4ea0, #508CFF);
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(80,140,255,0.6);
+}
+
+/* Footer bottom-right */
+footer {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+}
+footer span {
+  color: #fff;
+  font-weight: bold;
+}
